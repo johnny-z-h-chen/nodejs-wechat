@@ -1,0 +1,114 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "the wechat service is focusing on the conversation with wechat",
+    "version": "1.0.0",
+    "title": "WeChat Service Docs",
+    "contact": {
+      "email": "johnny.z.h.chen@outlook.com"
+    }
+  },
+  "host": "127.0.0.1:8088",
+  "basePath": "/api/v1",
+  "tags": [
+    {
+      "name": "WeChat Integration",
+      "description": "WeChat Integration",
+      "externalDocs": {
+        "description": "find out more about wechat integration",
+        "url": "https://developers.weixin.qq.com/doc/offiaccount/Basic_Information/Access_Overview.html"
+      }
+    }
+  ],
+  "schemes": ["http"],
+  "paths": {
+    "/wechat": {
+      "get": {
+        "tags": ["WeChat Integration"],
+        "summary": "wechat integration",
+        "description": "",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "signature",
+            "description": "wechat signature",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "timestamp",
+            "description": "wechat timestamp",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "nonce",
+            "description": "wechat nonce",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "echostr",
+            "description": "wechat echostr",
+            "required": true
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Message": {
+      "id": "Message",
+      "type": "object",
+      "required": ["channel", "templateName", "data"],
+      "properties": {
+        "channel": {
+          "type": "string"
+        },
+        "templateName": {
+          "type": "string"
+        },
+        "data": {
+          "type": "object",
+          "required": ["suggestions", "descriptions"],
+          "properties": {
+            "descriptions": {
+              "type": "string"
+            },
+            "suggestions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["title", "star", "detail"],
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "star": {
+                    "type": "integer"
+                  },
+                  "detail": {
+                    "type": "string"
+                  },
+                  "review": {
+                    "type": "string"
+                  },
+                  "img": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

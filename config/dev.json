@@ -1,0 +1,27 @@
+{
+  "apiprefix": "/api/v1",
+  "enableSwagger": true,
+  "corsHeaders": ["Link"],
+  "bodyLimit": "100kb",
+  "swaggerRoute": "/swagger-ui",
+  "apiDefinitionPath": "config/swagger/swagger.json",
+  "slackToken": "xoxp-593137423265-593137424225-603029845831-6c5e48199e44121b93c758ed268c4099",
+  "slackWebhookUri": "https://hooks.slack.com/services/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",
+  "slackUserName": "ChatBot",
+  "slackAvatarUrl": "https://avatars0.githubusercontent.com/u/19209874?s=48&v=4",
+  "apiValidationSchema": [
+    {
+      "id": "/v1/api/message",
+      "schema": "Message"
+    }
+  ],
+  "wechatInfo": {
+    "token": "Pl2GQK5DoMcewSIa7jl9",
+    "appid": "wxf65129d0cd50bb1e",
+    "appsecret": "3ba83af1d46f5de214d0d96e0856b3d4",
+    "wechatBaseUrl": "https://api.weixin.qq.com",
+    "webAuthenticationUrl": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxf65129d0cd50bb1e&redirect_uri=https://uat2.vgohome.com/en/article&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect",
+    "accessTokenExpireTime": 7000
+  },
+  "httpRequestTimeout": 20
+}

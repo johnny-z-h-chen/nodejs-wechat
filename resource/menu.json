@@ -1,0 +1,31 @@
+{
+  "button": [
+    {
+      "type": "view",
+      "name": "article",
+      "url": "https://uat2.vgohome.com/en/article"
+    },
+    {
+      "type": "view",
+      "name": "event",
+      "url": "https://uat2.vgohome.com/en/event"
+    },
+    {
+      "name": "visionGo",
+      "sub_button": [
+        {
+          "type": "miniprogram",
+          "name": "wxa",
+          "url": "http://mp.weixin.qq.com",
+          "appid": "wx286b93c14bbf93aa",
+          "pagepath": "pages/lunar/index"
+        },
+        {
+          "type": "view",
+          "name": "authentication",
+          "url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxf65129d0cd50bb1e&redirect_uri=https://uat2.vgohome.com/en/article&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect"
+        }
+      ]
+    }
+  ]
+}
