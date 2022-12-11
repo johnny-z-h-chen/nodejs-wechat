@@ -36,7 +36,7 @@
     "cors": "^2.7.1",
     "crypto": "^1.0.1",
     "ejs": "^3.0.1",
-    "express": "^4.13.3",
+    "express": "^4.17.3",
     "jsonschema": "^1.2.4",
     "log4js": "^6.4.0",
     "memory-cache": "^0.2.0",
